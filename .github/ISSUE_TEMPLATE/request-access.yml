@@ -16,6 +16,7 @@ body:
       options:
         - Stratos (ORB trading bot for TopstepX)
         - Autopilot (AI-assisted trading system for MyFundedPerps)
+        - Tickbook (trading journal and prop firm risk dashboard)
     validations:
       required: true
 
