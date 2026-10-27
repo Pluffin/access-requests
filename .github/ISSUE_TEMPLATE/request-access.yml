@@ -1,0 +1,50 @@
+name: 🔑 Request access
+description: Ask for read access to one of my private trading projects.
+title: "[Access] "
+labels: ["access-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for your interest! Fill this out and I'll review your request.
+        Your **GitHub username** is attached automatically, so I'll know who to add.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Which project?
+      options:
+        - Stratos (ORB trading bot for TopstepX)
+        - Autopilot (AI-assisted trading system for MyFundedPerps)
+    validations:
+      required: true
+
+  - type: input
+    id: discord
+    attributes:
+      label: Your Discord username
+      description: So I can match you with the Penguin Colony community.
+      placeholder: e.g. trader123
+    validations:
+      required: true
+
+  - type: textarea
+    id: reason
+    attributes:
+      label: What do you want to use it for?
+      description: A sentence or two is enough.
+      placeholder: e.g. I trade MNQ on a TopstepX 50K account and want to test ORB automation on demo first.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Before you send
+      options:
+        - label: I won't share or redistribute the code.
+          required: true
+        - label: I'll test on a demo or paper account first and follow my prop firm's rules.
+          required: true
+        - label: I understand this is not financial advice and trading carries risk.
+          required: true
